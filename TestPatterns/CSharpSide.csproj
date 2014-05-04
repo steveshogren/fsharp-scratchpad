@@ -33,5 +33,6 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Compile Include="Patterns.cs" />
+    <Compile Include="Helpers.cs" />
   </ItemGroup>
 </Project>
