@@ -38,10 +38,14 @@
       <HintPath>..\..\..\..\..\usr\lib\mono\4.0\FSharp.Core.dll</HintPath>
     </Reference>
     <Reference Include="System.Configuration" />
+    <Reference Include="FSharpx.Core">
+      <HintPath>..\packages\FSharpx.Core.1.8.41\lib\40\FSharpx.Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.fs" />
     <Compile Include="Program.fs" />
+    <Compile Include="Tolerance.fsx" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\..\Microsoft F#\v4.0\Microsoft.FSharp.Targets" />
   <ItemGroup>
@@ -49,5 +53,8 @@
       <Project>{6447FD51-25FC-47F2-82B0-24A99DEE7DE6}</Project>
       <Name>CSharpSide</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

@@ -2,15 +2,16 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="monads-fsharp/Program.fs">
     <Files>
-      <File FileName="monads-fsharp/Program.fs" Line="23" Column="31" />
-      <File FileName="TestPatterns/Patterns.cs" Line="4" Column="1" />
+      <File FileName="monads-fsharp/Program.fs" Line="34" Column="11" />
+      <File FileName="TestPatterns/Patterns.cs" Line="11" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True" selected="True">
+        <State expanded="True">
           <Node name="CSharpSide" expanded="True" />
           <Node name="inverted-polymorphism" expanded="True">
             <Node name="References" expanded="True" />
+            <Node name="Program.fs" selected="True" />
           </Node>
         </State>
       </Pad>
