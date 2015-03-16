@@ -35,5 +35,6 @@
     <Compile Include="Patterns.cs" />
     <Compile Include="Helpers.cs" />
     <Compile Include="ToleranceChecker.cs" />
+    <Compile Include="Helper.cs" />
   </ItemGroup>
 </Project>
