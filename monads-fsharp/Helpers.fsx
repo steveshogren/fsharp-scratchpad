@@ -25,6 +25,31 @@ type MovementMessage = {
     Type: MovementType
 }
 
+type Direction = 
+    | Held_Deliver_Prin
+    | Held_Return_Counterparty
+    | Posted_Return_Prin
+    | Posted_Deliver_Counterparty
+    | Unknown
+    
+let GetDirectionClass = function
+   | Deliver, Principal  -> new HeldReturnCounterpary()
+   | Return, Counterparty -> new Held_Return_Counterparty
+   | Return, Principal -> Posted_Return_Prin
+   | Deliver, Counterparty -> Posted_Deliver_Counterparty
+   | MovementType.Undefined, _ | _, ApplyToParty.Undefined -> Unknown
+   
+let GetDirectionC#Class = function
+   | Deliver, Principal  -> new Held_Deliver_Prin()
+   | Return, Counterparty -> new Held_Return_Counterparty()
+   | Return, Principal -> new Posted_Return_Prin()
+   | Deliver, Counterparty -> new Posted_Deliver_Counterparty()
+   
+let GetApply = function
+   | Held_Deliver_Prin | Posted_Return_Prin -> Principal
+   | Held_Return_Counterparty | Posted_Deliver_Counterparty -> Counterparty
+   | Unknown -> ApplyToParty.Undefined 
+
 let GetPositionType (movementType:MovementType) (applyToParty: ApplyToParty) =
     match (movementType, applyToParty) with
        | Deliver, Principal | Return, Counterparty -> Held
